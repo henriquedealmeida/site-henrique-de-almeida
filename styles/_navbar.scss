@@ -8,7 +8,7 @@
 
 .navbar {
     background-color: $light;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem calc((100vw - 1200px) /2);
@@ -17,9 +17,12 @@
 
     &__logo {
         cursor: pointer;
-        text-decoration: none;
-        font-size: 2rem;
+        max-width: 100%;
+        width: 335px;
+        height: auto;
         margin-left: 24px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         @extend %align-center;
     }
 
@@ -47,19 +50,30 @@
         }
 
         #button {
-            padding: 12px 18px;
-            border: none;
-            outline: none;
+            padding: 10px 16px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: $green;
             border-radius: 4px;
             background: $green;
             margin-left: 16px;
             color: $light;
+            transition: all 0.3s ease;
 
             &:hover {
                 color: $green;
-                background: $white;
+                background: $light;
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 4px;
+                border-color: $green;
                 transition: all 0.3s ease;
             }
         }
     }
+}
+
+.footer {
+    display: inline;
+    color: $gray;
 }
